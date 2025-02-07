@@ -1,0 +1,188 @@
+<!DOCTYPE  html >
+<html lang "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Radio Lluvia 97.5 FM</title>
+    <link rel="shortcut icon" href="img/log.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" id="selected"></a></li>
+                        <li><a href="#">Portafolio</a>
+                            <ul>
+                                <li><a href="programación.html">Programación</a></li>
+                                <li><a href="#">Lluvia TV</a></li>
+                                <li><a href="#">Eventos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Servicios</a>
+                            <ul>
+                                <li><a href="#">Adquirir Publicidad</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Acerca De</a>
+                            <ul>
+                                <li><a href="#">Historia</a></li>
+                                <li><a href="#">Ubicación</a></li>
+                                <li><a href="#">Contactos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/radiolluvia-sincors.js"></script>
+        
+        <div id="radiolluvia" style="width:100%; height:100%; align-items: center; background: #000000 url(img/portadarepro.jpg) bottom / cover no-repeat;">loading...</div>			
+        
+        <script>
+        $("#radiolluvia").radiolluvia({
+        userinterface: "big", 
+        backgroundcolor: "",
+        fontcolor: "#140565",
+        hightlightcolor: "#28FFFF", 
+        fontname: "cooper black", 
+        googlefont: "Unica+One&display=swap", 
+        fontratio: "0.4", 
+        radioname: "", 
+        scroll: "true", 
+        coverimage: "img/logorepro.jpg",
+        onlycoverimage: "false",
+        coverstyle: "animated",
+        usevisualizer: "real", 
+        visualizertype: "4", 
+        metadatatechnic: "",
+        ownmetadataurl: "", 
+        streamurl: "https://streamingecuador.net:7010", 
+        streamtype: "shoutcast2", 
+        icecastmountpoint: "",
+        shoutcastpath: "/stream",
+        shoutcastid: "1", 
+        streamsuffix: "", 
+        radionomyid: "", 
+        radionomyapikey: "",
+        radiojarid: "",  
+        radiocoid: "",
+        itunestoken: "1000lIPN", 
+        metadatainterval: "5000", 
+        volume: "50",
+        debug: "false",
+        autoplay: "true"
+        });
+        </script>
+    </header>
+    <main>
+        <section class="presidente">
+            <h2 class="titulo">Presidente Ejecutivo - Radio Lluvia</h2>
+            <div class="contenedor-pre">
+                <img src="img/ovarcastillo.jpeg" alt="" class="imagen-presidente">
+                <div class="contenido-presidente">
+                    <p>Mantener un plan de capacitación y desarrollo profesional permanente para el recurso humano para lograr su desarrollo y superación, a fin de contar con personal comprometido a mejorar continuamente y a ofrecer un servicio integral a la comunidad.</p>
+                    <h3>Ovar Castillo</h3>
+                    </div>
+            </div>
+         </section>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Descarga Nuestra App Móvil</h2>
+            <div class="contenedor-sobre-nosotros">
+                <a href="https://play.google.com/store/apps/details?id=com.radiolluvia&hl=es_GT&pli=1"><img src="img/playstore.png" alt="imageURL"></a>
+            </div>
+        </section>
+        <section class="clientes">
+            <div class="contenedor">
+                <h2 class="titulo">Nuestros Clientes</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="img/SAN-PATRICIO.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/log.ico" alt="">
+                            <p>Cliente</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/LOGO-DR.-EMILIO-BRIONES.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/log.ico" alt="">
+                            <p>Cliente</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/HOSPITAL-REINA-DEL-CISNE.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/log.ico" alt="">
+                            <p>Cliente</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/COOP.-PADRE-JULIAN-LORENTE.png" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/log.ico" alt="">
+                            <p>Cliente</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/MULTILLANTAS-ADOLFO-PYF.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/log.ico" alt="">
+                            <p>Cliente</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/HOS-RIO-FACEBOOK-1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/log.ico" alt="">
+                            <p>Cliente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>Teléfonos</h4>
+                <p>2976-450</p>
+                <p>2977-099</p>
+                <a href="https://api.whatsapp.com/send/?phone=%2B593991350085&text&type=phone_number&app_absent=0">+593 99 135 0085</a>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p>lluviafm@hotmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicación</h4>
+                <p>Av Loja 28-36, Piñas, Ecuador</p>
+            </div>            
+        </div>
+        <div class="redes-footer">
+            <div class="content-red">
+                <a href="https://www.facebook.com/RadioLluvia97.5"><img src="img/logoface.png" alt="imageURL"></a>
+            </div>
+            <div class="content-red">
+                <a href="https://www.youtube.com/channel/UCY2EjHcgweljwJsE9Nj2EZg"><img src="img/logoyoutube.png" alt="imageURL"></a>
+            </div>
+            <div class="content-red">
+                <a href="https://twitter.com/lluviaradio"><img src="img/logotwitter.png" alt="imageURL"></a>
+            </div>
+            <div class="content-red">
+                <a href="https://www.instagram.com/accounts/login/?next=/radiolluvia97.5/"><img src="img/logoinsta.png" alt="imageURL"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
