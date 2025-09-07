@@ -1,0 +1,88 @@
+<!DOCTYPE  html >
+<html lang "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Radio Lluvia 97.5 FM</title>
+    <link rel="shortcut icon" href="img/log.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/estilosrepro.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>                
+                <nav>
+                    <ul>
+                        <li><a href="index.html" id="selected"></a></li>
+                        <li><a href="#">Portafolio</a>
+                            <ul>
+                                <li><a href="programación.html">Programación</a></li>
+                                <li><a href="#">Lluvia TV</a></li>
+                                <li><a href="#">Eventos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Servicios</a>
+                            <ul>
+                                <li><a href="#">Adquirir Publicidad</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Acerca De</a>
+                            <ul>
+                                <li><a href="#">Historia</a></li>
+                                <li><a href="#">Ubicación</a></li>
+                                <li><a href="#">Contactos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="reproductor.html" id="repro" autoplay></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/radiolluvia-sincors.js"></script>
+        
+        <div id="radiolluvia" style="width:100%; height:100%; align-items: center; background: #000000 url(img/portadarepro.jpg) bottom / cover no-repeat;">loading...</div>			
+        
+        <script>
+        $("#radiolluvia").radiolluvia({
+        userinterface: "big", 
+        backgroundcolor: "",
+        fontcolor: "#140565",
+        hightlightcolor: "#28FFFF", 
+        fontname: "cooper black", 
+        googlefont: "Unica+One&display=swap", 
+        fontratio: "0.4", 
+        radioname: "", 
+        scroll: "true", 
+        coverimage: "img/logorepro.png",
+        onlycoverimage: "false",
+        coverstyle: "animated",
+        usevisualizer: "real", 
+        visualizertype: "0", 
+        metadatatechnic: "",
+        ownmetadataurl: "", 
+        streamurl: "https://streamingecuador.net:7010", 
+        streamtype: "shoutcast2", 
+        icecastmountpoint: "",
+        shoutcastpath: "/stream",
+        shoutcastid: "1", 
+        streamsuffix: "", 
+        radionomyid: "", 
+        radionomyapikey: "",
+        radiojarid: "",  
+        radiocoid: "",
+        itunestoken: "1000lIPN", 
+        metadatainterval: "5000", 
+        volume: "50",
+        debug: "false",
+        autoplay: "true"
+        });
+        </script>
+    </header>
+</html>

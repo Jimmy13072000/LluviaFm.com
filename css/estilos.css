@@ -1,0 +1,622 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'cooper black';
+
+}
+
+.contenedor{
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: rgba(72, 127, 209, 0.978);
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/*Header*/
+
+header{
+    width: 100%;
+    height: 590px;
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(215, 65%, 53%, 0), hsla(191, 100%, 50%, 0)), url(../img/portada.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(0, 100%, 50%, 0), hsla(61, 100%, 50%, 0)), url(../img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    
+}
+
+.contenedor-menu{
+    width: 100%;
+    height: 60px;
+    background: #00d2ff;
+    background: linear-gradient(to right, hsla(215, 65%, 53%, 0.942), hsla(191, 100%, 50%, 0.592));
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;    
+}
+
+nav>ul {
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav>ul>li:first-child>a{
+    background-image: url(../img/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav>ul>li:first-child:hover>a{
+    background-image: url(../img/home.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav>ul>li>a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+    text-decoration-color: aqua;
+    text-decoration-line: none;
+}
+
+nav>ul>li>a:hover{
+    transform: scale(1.1);
+    background: #0074C7;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+
+#selected{
+    transform: scale(1.1);
+    background-color: #0074C7;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+
+nav>ul>li:last-child>a{
+    background-image: url(../img/repro.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav>ul>li:last-child:hover>a{
+    background-image: url(../img/repro.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: #0099E9;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: unppercase;
+    transition: all 300ms ease;
+    text-decoration-color: aqua;
+    text-decoration-line: none;
+}
+
+nav ul li ul li a:hover{
+    background: #0074C7;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 5);
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: baseline;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: #fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a img{
+    margin:0 auto ;
+    display: block;
+    width: 40%;
+}
+
+.sobre-nosotros{
+    
+}
+/*Galeria Clientes*/
+
+.clientes{
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 28%;
+    height: 30%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(201, 100%, 46%, 0.647);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50px;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/*Contactos*/
+
+footer{
+    width: 100%;
+    height: 289px;
+    background: #00d2ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(215, 96%, 53%, 0.715), hsla(191, 73%, 31%, 0.748)),url(../img/portadacontactos.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(215, 96%, 53%, 0.715), hsla(191, 73%, 31%, 0.748)),url(../img/portadacontactos.jpg) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #202cd3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.content-foo p{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.content-foo a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: rgb(128, 127, 127);
+}
+
+.redes-footer{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.content-red a{
+    margin:5px auto     ;
+    display: block;
+}
+
+/*Elementos responsivos*/
+
+.icon__menu{
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    align-items: center;
+    display: none;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+@media  screen and (max-width: 1240px) {
+    header{
+        width: 100%;
+        height: 480px;
+        background: #00d2ff;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(215, 65%, 53%, 0), hsla(191, 100%, 50%, 0)), url(../img/portada.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(0, 100%, 50%, 0), hsla(61, 100%, 50%, 0)), url(../img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: contain;
+        background-attachment: fixed;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media  screen and (max-width: 1000px) {
+    header{
+        width: 100%;
+        height: 390px;
+        background: #00d2ff;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(215, 65%, 53%, 0), hsla(191, 100%, 50%, 0)), url(../img/portada.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(0, 100%, 50%, 0), hsla(61, 100%, 50%, 0)), url(../img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: contain;
+        background-attachment: fixed;
+        position: relative;
+        text-align: center;
+    }
+}
+
+@media  screen and (max-width: 720px) {
+    header{
+        width: 100%;
+        height: 300px;
+        background: #00d2ff;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(215, 65%, 53%, 0), hsla(191, 100%, 50%, 0)), url(../img/portada.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(0, 100%, 50%, 0), hsla(61, 100%, 50%, 0)), url(../img/portada.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: contain;
+        background-attachment: fixed;
+        position: relative;
+        text-align: center;
+    }
+
+    .contenedor-menu{
+        width: 100%;
+        height: 45px;
+        background: #00d2ff;
+        background: linear-gradient(to right, hsla(215, 65%, 53%, 0.942), hsla(191, 100%, 50%, 0.592));
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0px 20px;
+    }
+    
+    .menu{
+        max-width: 720px;
+        margin: auto;
+        height: 100%;
+    }
+
+    nav>ul{
+        flex-direction: column;
+        background-color: #023877;
+        position: fixed;
+        left: 0;
+        top: 45px;
+        width: 100%;
+        height: 300px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav > ul > li:hover ul{
+        left: 50px;
+    }
+
+    nav > ul > li:first-child a{
+        background-position: 20px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+    
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .wave{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    a img{
+        margin:0 auto ;
+        display: block;
+        height: 30%;
+        width: 30%;
+    }
+
+    .sobre-nosotros h2{
+        font-size: 22px;
+    }
+
+    nav > ul > li:last-child a{
+        background-position: 20px;
+    }
+
+    #repro{
+        transform: scale(1);
+    }
+
+    /* Clientes */
+    
+    .contenedor h2{
+        font-size: 22px;
+    }
+
+    .clientes{
+        background: #f2f2f2;
+    }
+
+    .galeria-port{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .imagen-port{
+        width: 28%;
+        height: 30%;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    }
+
+    .imagen-port > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hover-galeria{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: scale(0);
+        background: hsla(201, 100%, 46%, 0.647);
+        transition: transform .5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hover-galeria img{
+        width: 50px;
+    }
+
+    .hover-galeria p{
+        color: #fff;
+    }
+
+    .imagen-port:hover .hover-galeria{
+        transform: scale(1);
+    }
+
+    /*Contactos*/
+
+    footer{
+        width: 100%;
+        height: 183px;
+        background: #00d2ff;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(215, 96%, 53%, 0.715), hsla(191, 73%, 31%, 0.748)),url(../img/portadacontactos.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(215, 96%, 53%, 0.715), hsla(191, 73%, 31%, 0.748)),url(../img/portadacontactos.jpg) ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 20px 0 10px 0;
+        margin: auto;
+        overflow: hidden;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .contenedor-footer{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin: auto;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .content-foo{
+        text-align: center;
+    }
+    
+    .content-foo h4{
+        color: #fff;
+        border-bottom: 3px solid #202cd3;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    
+    .content-foo p{
+        color: rgb(255, 255, 255);
+        font-size: 10px;
+    }
+    
+    .content-foo a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 10px;
+    }
+    
+    .titulo-final{
+        text-align: center;
+        font-size: 24px;
+        margin: 20px 0 0 0;
+        color: rgb(128, 127, 127);
+    }
+    
+    .redes-footer{
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+    
+    .content-red a{
+        margin:5px auto     ;
+        display: block;
+    }
+    
+}
